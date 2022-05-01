@@ -1,0 +1,136 @@
+.mobile-menu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    padding: 15px 10px 48px 40px;
+    z-index: 999;
+
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.menu-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: #212121;
+    border: none;
+    padding: 0;
+    margin-left: auto;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #212121;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+}
+
+.mobile-menu-list__item {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.mobile-menu-list__link {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: #212121;
+
+    &:focus,
+    &:hover {
+        color: var(--accent-color);
+    }
+
+    &--current {
+        color: var(--accent-color);
+    }
+}
+
+.mobile-menu-list__tell {
+    display: block;
+    margin-bottom: 32px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+}
+
+.mobile-menu-list__mail {
+    display: block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: #757575;
+    margin-bottom: 64px;
+}
+
+.mobile-menu-list__social {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.mobile-menu-list__social-item {
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+
+    &:not(:first-child)::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -10px;
+        width: 1px;
+        height: 22px;
+        background-color: rgba(33, 33, 33, 0.2);
+    }
+}
