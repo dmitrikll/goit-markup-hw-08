@@ -6,9 +6,10 @@
   --active-button-text-color: #ffffff;
   --background-block-color: #2f303a;
   --background-page-color: #f5f4fa;
-  --footer-text-color: rgba(255, 255, 255, 0.6);
   --white-background-color: #ffffff;
   --hover-button-cover: #188ce8;
+  --border-color: #eeeeee;
+  --picture-color: #afb1b8;
 }
 
 .visually-hidden {
@@ -726,7 +727,7 @@ textarea:focus {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  color: var(--footer-text-color);
+  color: var(--active-button-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
